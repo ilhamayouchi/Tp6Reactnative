@@ -1,17 +1,18 @@
 import React from "react";
-import { View, StyleSheet, StatusBar } from "react-native";
+import { View, StyleSheet } from "react-native";
 
 import AppHeader from "../components/AppHeader";
 import AppFooter from "../components/AppFooter";
-import MenuItems from "../components/MenuItems";
+import LoginScreen from "../components/LoginScreen";
+// import WelcomeScreen from "../components/WelcomeScreen";
 
 export default function App() {
   return (
     <>
-      <StatusBar barStyle="light-content" />
       <View style={styles.container}>
         <AppHeader />
-        <MenuItems />
+        <LoginScreen />
+        {/* Pour tester l'écran d'accueil, remplacez par : <WelcomeScreen /> */}
       </View>
       <View style={styles.footerContainer}>
         <AppFooter />
