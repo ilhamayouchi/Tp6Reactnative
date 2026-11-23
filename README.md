@@ -1,4 +1,4 @@
-# Lab 7 : Créer un champ de saisie et un écran de connexion avec TextInput
+# Lab 8 : Afficher et styliser des images dans une application React Native
 
 ## Affichage d'application web : 
 <img width="1918" height="843" alt="image" src="https://github.com/user-attachments/assets/b2d3d6db-364e-4a23-b801-94f8e0a01d55" />
@@ -8,3 +8,7 @@
 
 ## Affichage du connexion : 
 <img width="1918" height="834" alt="image" src="https://github.com/user-attachments/assets/94e02748-b301-4ea0-9d8b-5ce8abdeb6b1" />
+
+
+## Affichage : 
+<img width="959" height="416" alt="image" src="https://github.com/user-attachments/assets/cef5c8cf-fcf2-4d81-9a50-fb75511f256c" />
