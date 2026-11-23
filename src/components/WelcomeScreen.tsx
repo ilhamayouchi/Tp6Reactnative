@@ -1,22 +1,21 @@
-import React, { useState } from "react";
-import { ScrollView, Text, StyleSheet, TextInput } from "react-native";
+import React from "react";
+import { ScrollView, View, Text, StyleSheet, Image } from "react-native";
 
 export default function WelcomeScreen() {
-  const [firstName, onChangeFirstName] = useState("");
-
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.headerText}>Welcome to My App</Text>
-      <Text style={styles.regularText}>
-        This is a simple demo application. Please enter your name below.
-      </Text>
+      <View style={styles.headerWrapper}>
+        <Image
+          style={styles.logo}
+          source={require("../../img/logo.png")}
+          resizeMode="contain"
+          accessible={true}
+          accessibilityLabel="Logo de l'application"
+        />
+        <Text style={styles.headerText}>AppName</Text>
+      </View>
 
-      <TextInput
-        style={styles.inputBox}
-        value={firstName}
-        onChangeText={onChangeFirstName}
-        placeholder="First Name"
-      />
+      <Text style={styles.subtitle}>Welcome to our Mediterranean Bistro</Text>
     </ScrollView>
   );
 }
@@ -24,31 +23,30 @@ export default function WelcomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#333333",
+    backgroundColor: "#EDEFEE",
+  },
+  headerWrapper: {
+    flexDirection: "row",
+    alignItems: "center",
+    padding: 16,
+    backgroundColor: "#EE9972",
+  },
+  logo: {
+    width: 60,
+    height: 60,
+    borderRadius: 12,
+    marginRight: 12,
+    backgroundColor: "white",
   },
   headerText: {
-    padding: 40,
-    fontSize: 30,
-    color: "#EDEFEE",
-    textAlign: "center",
-  },
-  regularText: {
     fontSize: 24,
-    padding: 20,
-    marginVertical: 8,
-    color: "#EDEFEE",
-    textAlign: "center",
+    fontWeight: "bold",
+    color: "black",
   },
-  inputBox: {
-    height: 40,
-    marginHorizontal: 20,
-    marginVertical: 12,
-    paddingHorizontal: 10,
-    borderWidth: 1,
-    borderColor: "#EDEFEE",
-    borderRadius: 8,
-    fontSize: 18,
-    backgroundColor: "#FFFFFF",
-    color: "#000000",
+  subtitle: {
+    paddingHorizontal: 16,
+    paddingTop: 16,
+    fontSize: 16,
+    color: "black",
   },
 });

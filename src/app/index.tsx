@@ -1,32 +1,21 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 
-import AppHeader from "../components/AppHeader";
-import AppFooter from "../components/AppFooter";
-import LoginScreen from "../components/LoginScreen";
-// import WelcomeScreen from "../components/WelcomeScreen";
+import WelcomeScreen from "../components/WelcomeScreen";
 
 export default function App() {
   return (
-    <>
-      <View style={styles.container}>
-        <AppHeader />
-        <LoginScreen />
-        {/* Pour tester l'écran d'accueil, remplacez par : <WelcomeScreen /> */}
-      </View>
-      <View style={styles.footerContainer}>
-        <AppFooter />
-      </View>
-    </>
+    <View style={styles.container}>
+      <WelcomeScreen />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#333333",
-  },
-  footerContainer: {
-    backgroundColor: "#333333",
+    backgroundColor: "#EDEFEE",
+    // Sur le web, la barre « Expo Starter » flotte par-dessus le contenu
+    paddingTop: 80,
   },
 });
